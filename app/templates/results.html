@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Results for Document {{ document.id }}</h2>
+<h3>Analysis Results</h3>
+<ul>
+    {% for result in analysis_results %}
+    <li>{{ result.data }}</li>
+    {% endfor %}
+</ul>
+<h3>Sorting Results</h3>
+<ul>
+    {% for result in sorting_results %}
+    <li>{{ result.sorted_data }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
